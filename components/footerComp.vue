@@ -111,7 +111,6 @@ a:hover {
 </style>
 
 <script>
-import socialIcons from "~/components/social_icons/socialIcons.vue";
 export default {
   data: () => ({
     icons: {
@@ -133,8 +132,6 @@ export default {
       }
     }
   }),
-  components: {
-    socialIcons
-  }
+  components: {}
 };
 </script>
