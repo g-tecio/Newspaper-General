@@ -9,7 +9,7 @@
 
       <drawer :config="config"/>
 
-      <h1 style="border-bottom: 1px solid #000;">Secction Name</h1>
+      <h1 style="border-bottom: 1px solid #000;">{{$route.params.category}}</h1>
       <v-layout row wrap>
         <v-flex xs12 md4 class="articleBar">
           <articleBar/>

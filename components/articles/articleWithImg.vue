@@ -19,7 +19,7 @@
       <v-card-actions>
         <v-btn flat disabled>{{date}}</v-btn>
         <v-layout align-center justify-end>
-          <v-btn flat color="red" slot="end" href="/seccionView">Show more</v-btn>
+          <v-btn flat color="red" slot="end">Show more</v-btn>
         </v-layout>
       </v-card-actions>
     </v-container>
