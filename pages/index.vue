@@ -26,7 +26,7 @@
           <afterFullContainer/>
         </v-flex>
 
-        <v-flex xs12 md3 id="sideNews" class="hidden-sm-and-down">
+        <v-flex xs12 md3 id="sideNews2" class="hidden-sm-and-down">
           <sideNews2/>
         </v-flex>
       </v-layout>
@@ -80,9 +80,14 @@ export default {
 }
 #sideNews {
   border-left: 1px solid #000;
+  border-bottom: 1px solid #000;
+padding-top: 10px;
 }
 #fullContainer {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+}
+#sideNews2{
+  border-left: 1px solid #000;
 }
 </style>

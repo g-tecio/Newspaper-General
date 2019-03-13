@@ -1,7 +1,7 @@
 <template>
   <div>
-    <secondArticle style="border-bottom: 1px solid #000;"/>
-    <firstArticle style="border-bottom: 1px solid #000; border-top: 1px solid #000;"/>
+    <secondArticle id="articleBar1"/>
+    <firstArticle id="articleBar1"/>
     <sideArticle/>
   </div>
 </template>
@@ -17,3 +17,11 @@ export default {
   }
 };
 </script>
+
+<style>
+  #articleBar1{
+    border-bottom: 1px solid #000;
+    box-shadow: none;
+  }
+</style>
+

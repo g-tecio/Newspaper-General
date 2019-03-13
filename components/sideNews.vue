@@ -1,10 +1,10 @@
 <template>
   <div>
-    <sideArticle/>
-    <sideArticle/>
-    <sideArticle/>
-    <sideArticle/>
-    <sideArticle/>
+    <sideArticle id="side-article1"/>
+    <sideArticle id="side-article1"/>
+    <sideArticle id="side-article1"/>
+    <sideArticle id="side-article1"/>
+    <sideArticle id="side-articleLast"/>
   </div>
 </template>
 
@@ -16,3 +16,14 @@ export default {
   }
 };
 </script>
+
+<style>
+  #side-article1{
+    border-bottom: 1px solid #000;
+    box-shadow: none;
+  }
+  #side-articleLast{
+    box-shadow: none;
+  }
+</style>
+

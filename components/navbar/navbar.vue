@@ -5,6 +5,7 @@
         v-for="item in toolbar_options"
         :key="item.title"
         :to="{name: 'category-category', params: { category: item.title} }"
+        flat
       >{{ item.title }}</v-btn>
     </v-toolbar-items>
     <v-menu class="hidden-md-and-up">

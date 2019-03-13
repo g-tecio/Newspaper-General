@@ -5,7 +5,7 @@
         <h1 class="headline mb-0">{{title}}</h1>
       </div>
     </v-card-title>
-    <v-card-actions>
+    <v-card-actions id="sideArticleActions">
       <v-btn flat disabled>{{date}}</v-btn>
       <v-layout align-center justify-end>
         <v-btn flat color="red" slot="end">Show more</v-btn>
@@ -29,11 +29,13 @@ export default {
 #sideArticle {
   box-shadow: inherit;
   background-color: inherit;
-  border-bottom: 1px solid #000;
   padding: 5px;
 }
 .theme--light.v-sheet {
   background-color: inherit;
+}
+#sideArticleActions .v-btn__content{
+  font-size: 12px;
 }
 </style>
 

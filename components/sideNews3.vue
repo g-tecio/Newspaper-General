@@ -1,7 +1,7 @@
 <template>
   <div>
-    <sideArticle/>
-    <sideArticle/>
+    <sideArticle id="sideNews3-sideNew"/>
+    <sideArticle id="sideNews3-sideNew"/>
     <sideArticle/>
   </div>
 </template>
@@ -14,3 +14,11 @@ export default {
   }
 };
 </script>
+
+<style>
+  #sideNews3-sideNew{
+    border-bottom: 1px solid #000;
+    box-shadow: none
+  }
+</style>
+

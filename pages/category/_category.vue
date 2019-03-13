@@ -14,13 +14,12 @@
         <v-flex xs12 md4 class="articleBar">
           <articleBar/>
         </v-flex>
-
         <v-flex xs12 md8>
           <v-layout row wrap>
             <v-flex xs12 md8>
-              <articleBar2/>
+              <articleBar2 id="articleBar-layout"/>
             </v-flex>
-            <v-flex xs12 md4>
+            <v-flex xs12 md4 id="sideNews3-layout">
               <sideNews3/>
             </v-flex>
             <v-flex xs12 md12>
@@ -28,25 +27,24 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <h1 style="border-bottom: 1px solid #000;">More of this Section</h1>
-        <v-flex xs12 md12>
+        <h1>More of this Section</h1>
+        <v-flex xs12 md12 class="moreSectionFlex">
           <v-layout row wrap>
             <v-flex xs12 md8>
               <v-layout>
-                <v-flex xs12 md6 style="border-right: 1px solid #000;">
+                <v-flex xs12 md6 id="firstArticleLayout">
                   <firstArticle/>
                 </v-flex>
-                <v-flex xs12 md6>
+                <v-flex xs12 md6 id="firstArticleLayout2">
                   <firstArticle/>
                 </v-flex>
               </v-layout>
-              <v-flex xs12 md12 style="border-top: 1px solid #000;">
+              <v-flex xs12 md12>
                 <sideArticle2/>
               </v-flex>
             </v-flex>
-            <v-flex xs12 md4 style="border-left: 1px solid #000;">
+            <v-flex xs12 md4 id="sideNewsLayout">
               <sideNews2/>
-              <sideArticle style="border-top: 1px solid #000;"/>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -58,6 +56,7 @@
 <style>
 .articleBar {
   border-right: 1px solid #000;
+  border-bottom: 2px solid #000;
 }
 #newsContainer {
   padding-top: 10px;
@@ -66,11 +65,31 @@
 #sideNews {
   border-left: 1px solid #000;
 }
+.moreSectionFlex{
+  border-top: 2px solid #000;
+}
 #fullContainer {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
 #sideNews {
+  border-left: 1px solid #000;
+}
+#articleBar-layout{
+  border-right: 1px solid #000;
+}
+#sideNews3-layout{
+  border-bottom: 1px solid #000;
+  padding-top: 10px;
+}
+#firstArticleLayout{
+  border-right: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+#firstArticleLayout2{
+  border-bottom: 1px solid #000;
+}
+#sideNewsLayout{
   border-left: 1px solid #000;
 }
 </style>
