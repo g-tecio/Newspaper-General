@@ -8,8 +8,7 @@
       <banner/>
 
       <drawer :config="config"/>
-      <!--
-      -->
+
       <v-layout row wrap>
         <v-flex xs12 md9 id="newsContainer">
           <newsContainer/>
@@ -32,6 +31,7 @@
         </v-flex>
       </v-layout>
     </v-container>
+
     <footerComp/>
   </div>
 </template>
@@ -47,6 +47,7 @@ import fullContainer from "~/components/fullContainer.vue";
 import afterFullContainer from "~/components/afterFullContainer.vue";
 import sideNews2 from "~/components/sideNews2.vue";
 import footerComp from "~/components/footerComp.vue";
+import seccionView from "~/components/seccionView.vue";
 
 export default {
   data() {
@@ -66,7 +67,8 @@ export default {
     fullContainer,
     afterFullContainer,
     sideNews2,
-    footerComp
+    footerComp,
+    seccionView
   }
 };
 </script>

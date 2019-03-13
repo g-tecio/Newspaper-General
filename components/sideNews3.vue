@@ -3,8 +3,6 @@
     <sideArticle/>
     <sideArticle/>
     <sideArticle/>
-    <sideArticle/>
-    <sideArticle/>
   </div>
 </template>
 
