@@ -92,20 +92,20 @@
   text-decoration: none;
   color: #ffffff;
 }
-a {
+.footerLinks a {
   color: #ffffff;
   font-size: 10px;
 }
-a:link {
+.footerLinks a:link {
   text-decoration: none;
 }
-a:visited {
+.footerLinks a:visited {
   color: #ffffff;
 }
-a:active {
+.footerLinks a:active {
   color: #ffffff;
 }
-a:hover {
+.footerLinks a:hover {
   color: #ffffff;
 }
 </style>
