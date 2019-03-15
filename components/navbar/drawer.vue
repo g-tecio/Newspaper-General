@@ -11,7 +11,7 @@
             <v-list-tile avatar>
                 <v-container>
                     <v-img
-                        src="https://s3.amazonaws.com/nh-prototype/El+General+Oficial+500x168.png"
+                        src="https://s3.amazonaws.com/newspaper-bucket-cwgx/Progressive+Oficial+Black+600.png"
                         height="80px"
                     >
                     </v-img>

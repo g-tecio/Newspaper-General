@@ -1,11 +1,11 @@
 <template>
   <v-card id="articleWithoutImg">
     <v-container>
-      <v-img class="white--text" height="130px" :src="imageUrl">
+      <v-img class="white--text" height="130px" :src="article.imageUrl">
         <v-container fill-height fluid>
           <v-layout fill-height>
             <v-flex xs12 align-end flexbox>
-              <span class="headline">{{title}}</span>
+              <span class="headline">{{article.title}}</span>
             </v-flex>
           </v-layout>
         </v-container>
@@ -13,13 +13,13 @@
 
       <v-card-title primary-title>
         <div>
-          <p>{{ info }}</p>
+          <p>{{ article.info }}</p>
         </div>
       </v-card-title>
       <v-card-actions>
-        <v-btn flat disabled>{{date}}</v-btn>
+        <v-btn flat disabled>{{article.date}}</v-btn>
         <v-layout align-center justify-end>
-          <v-btn flat color="red" slot="end">Show more</v-btn>
+          <v-btn :to="{name: 'article-id', params: { id: article.id, title: article.title, content: article.info, image: article.imageUrl } }" flat color="red" slot="end">Show more</v-btn>
         </v-layout>
       </v-card-actions>
     </v-container>
@@ -30,11 +30,14 @@
 export default {
   data() {
     return {
-      imageUrl: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
-      title: "Times are changing",
-      info:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-      date: "February 12, 2019"
+      article: {
+        id: '84AdweQo21',
+        imageUrl: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+        title: "Times are changing",
+        info:
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        date: "February 12, 2019"
+      }
     };
   }
 };
