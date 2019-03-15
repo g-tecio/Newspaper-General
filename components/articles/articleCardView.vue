@@ -3,8 +3,8 @@
     <v-flex xs12 md4>
       <v-layout row wrap>
         <v-flex xs12 md12>
-          <h1 style="margin-top: 7%">{{articleTitle}}</h1>
-          <p style="margin-right: 3%">{{articleSubTitle}}</p>
+          <h1 style="margin-top: 7%">{{config.title}}</h1>
+          <p style="margin-right: 3%">{{config.content}}</p>
           <v-img :src="'https://picsum.photos/1024/400/?image=5'" alt="Avatar" class="avatar"/>
           <p style="display: inline-block">by {{articleAuthor}}</p>
         </v-flex>
@@ -26,18 +26,21 @@
     </v-flex>
     <v-flex xs12 md8>
       <v-img
-        :src="'https://picsum.photos/1024/400/?image=5'"
+
+        :src="config.image"
         fluid-grow
         alt="Fluid-grow image"
-        style="max-width: 100%; height: auto;"
+        style="max-width: 100%; height: auto; max-height: 350px"
       />
     </v-flex>
   </v-layout>
 </template>
 <script>
 export default {
+  props: ['config'],
   data() {
     return {
+      
       fecha: " " + this.getFecha() + "",
       articleTitle: "Titulo de la Nota",
       articleSubTitle:

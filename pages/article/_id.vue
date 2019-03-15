@@ -10,7 +10,7 @@
       <drawer :config="config"/>
       <br>
       <v-layout row wrap>
-        <articleCardView/>
+        <articleCardView :config="$route.params"/>
         <v-layout row wrap>
           <v-flex xs12 md9>
             <v-layout row wrap>
