@@ -3,9 +3,9 @@
     <v-layout row>
       <v-flex xs5>
         <router-link
-          :to="{name: 'article-id', params: { id: article.id, title: article.title, content: article.info, image: article.urlImage } }"
+          :to="{name: 'article-id', params: { id: article.id, article: article } }"
         >
-          <v-img :src="article.urlImage" height="125px" contain></v-img>
+          <v-img :src="article.imageUrl" height="125px" contain></v-img>
         </router-link>
       </v-flex>
       <v-flex xs7>
@@ -19,12 +19,13 @@
 </template>
 
 <script>
+let random = Math.floor(Math.random() * 10);
 export default {
   data() {
     return {
       article: {
         id: '9dka123s',
-        urlImage: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
+        imageUrl: "https://picsum.photos/250/250/?image=" + Math.floor(Math.random() * 101),
         title: "Times are changing",
         info:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry."

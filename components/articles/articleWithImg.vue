@@ -1,11 +1,11 @@
 <template>
   <v-card id="articleWithoutImg">
     <v-container>
-      <v-img class="white--text" height="130px" :src="article.imageUrl">
+      <v-img class="white--text" height="130px" :src="$store.state.articles[random].imageUrl">
         <v-container fill-height fluid>
           <v-layout fill-height>
             <v-flex xs12 align-end flexbox>
-              <span class="headline">{{article.title}}</span>
+              <span class="headline">{{$store.state.articles[random].title}}</span>
             </v-flex>
           </v-layout>
         </v-container>
@@ -13,13 +13,13 @@
 
       <v-card-title primary-title>
         <div>
-          <p>{{ article.info }}</p>
+          <p>{{ $store.state.articles[random].info }}</p>
         </div>
       </v-card-title>
       <v-card-actions>
-        <v-btn flat disabled>{{article.date}}</v-btn>
+        <v-btn flat disabled>{{$store.state.articles[random].date}}</v-btn>
         <v-layout align-center justify-end>
-          <v-btn :to="{name: 'article-id', params: { id: article.id, title: article.title, content: article.info, image: article.imageUrl } }" flat color="red" slot="end">Show more</v-btn>
+          <v-btn :to="{name: 'article-id', params: { id: $store.state.articles[random].id, article: $store.state.articles[random] } }" flat color="red" slot="end">Show more</v-btn>
         </v-layout>
       </v-card-actions>
     </v-container>
@@ -27,12 +27,14 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
+      random: Math.floor(Math.random() * 10),
       article: {
         id: '84AdweQo21',
-        imageUrl: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
+        imageUrl: "https://picsum.photos/250/250/?image=" + Math.floor(Math.random() * 101),
         title: "Times are changing",
         info:
           "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",

@@ -3,8 +3,8 @@
     <v-flex xs12 md4>
       <v-layout row wrap>
         <v-flex xs12 md12>
-          <h1 style="margin-top: 7%">{{config.title}}</h1>
-          <p style="margin-right: 3%">{{config.content}}</p>
+          <h1 style="margin-top: 7%">{{config.article.title}}</h1>
+          <p style="margin-right: 3%">{{config.article.info}}</p>
           <v-img :src="'https://picsum.photos/1024/400/?image=5'" alt="Avatar" class="avatar"/>
           <p style="display: inline-block">by {{articleAuthor}}</p>
         </v-flex>
@@ -26,11 +26,11 @@
     </v-flex>
     <v-flex xs12 md8>
       <v-img
-
-        :src="config.image"
+        class="article-image"
+        :src="config.article.imageUrl"
         fluid-grow
         alt="Fluid-grow image"
-        style="max-width: 100%; height: auto; max-height: 350px"
+        style="max-width: 100%; height: auto; max-height: 400px"
       />
     </v-flex>
   </v-layout>
@@ -104,6 +104,12 @@ export default {
   height: 30px;
   border-radius: 50%;
   display: inline-block;
+}
+.article-image {
+  height: 100%;
+  width: 100%;
+  display: block;
+  
 }
 #newsContainer {
   padding-top: 10px;

@@ -29,7 +29,7 @@
 export default {
   data() {
     return {
-      date: "February 12, 2019, Victoria de Durango, Durango",
+      date: "March 19, 2019, Victoria de Durango, Durango",
       button_options: [{ title: "Suscribe" }, { title: "Login" }]
     };
   }

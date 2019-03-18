@@ -53,10 +53,10 @@ export default {
                 {title: 'Sports'},
                 {title: 'Arts'},
                 {title: 'Books'},
-                {title: 'Style'},
-                {title: 'Food'},
-                {title: 'Travel'},
-                {title: 'Magazine'}
+                // {title: 'Style'},
+                // {title: 'Food'},
+                // {title: 'Travel'},
+                // {title: 'Magazine'}
             ]
         }
     }

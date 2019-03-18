@@ -4,7 +4,7 @@
       <v-btn
         v-for="item in toolbar_options"
         :key="item.title"
-        :to="{name: 'category-category', params: { category: item.title} }"
+        :to="{name: 'category-category', params: { category: item.title, img: item.img } }"
         flat
       >{{ item.title }}</v-btn>
     </v-toolbar-items>
@@ -22,21 +22,21 @@ export default {
   data() {
     return {
       title: "New Horizon",
-      responsive: false,
+      responsive: true,
       responsiveInput: false,
       toolbar_options: [
-        { title: "World" },
-        { title: "Politics" },
-        { title: "Business" },
-        { title: "Opinion" },
-        { title: "Tech" },
-        { title: "Science" },
-        { title: "Health" },
-        { title: "Sports" },
-        { title: "Arts" },
-        { title: "Books" },
-        { title: "Style" },
-        { title: "Food" }
+        { title: "World", img: 40},
+        { title: "Politics", img: 41},
+        { title: "Business", img: 42},
+        { title: "Opinion", img: 43},
+        { title: "Tech", img: 44},
+        { title: "Science", img: 45},
+        { title: "Health", img: 46},
+        { title: "Sports", img: 47},
+        { title: "Arts", img: 48},
+        // { title: "Books" },
+        // { title: "Style" },
+        // { title: "Food" }
       ]
     };
   }
