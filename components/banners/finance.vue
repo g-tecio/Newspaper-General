@@ -10,8 +10,7 @@
             </v-flex>
             <v-flex xs5>
                 <div class="finance-content">
-                    <div class="headline">22°C</div>
-                    <div>Durango, Mex</div>
+                    <div>Dólar: 19.43 MXN</div>
                 </div>
             </v-flex>
         </v-layout>

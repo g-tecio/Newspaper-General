@@ -5,7 +5,9 @@ const VuetifyLoaderPlugin = require('vuetify-loader/lib/plugin')
 
 module.exports = {
   mode: 'spa',
-
+  router: {
+    mode: "hash"
+  },
   /*
   ** Headers of the page
   */
@@ -62,12 +64,12 @@ module.exports = {
         import: ["~assets/style/variables.styl"]
       }
     },
-    
+
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }

@@ -14,7 +14,7 @@
           </v-flex>
           <v-flex xs12 md6 class="icons">
             <v-btn v-for="icon in icons" :key="icon" class="mx-1 icons" dark icon>
-              <a :href="icon.url" class="footerLinks2">
+              <a target="blank" :href="'https://' + icon.url" class="footerLinks2">
                 <v-icon size="24px">{{ icon.icon }}</v-icon>
               </a>
             </v-btn>
@@ -37,10 +37,9 @@
 </template>
 <script>
 export default {
-  props: ['config'],
+  props: ["config"],
   data() {
     return {
-      
       fecha: " " + this.getFecha() + "",
       articleTitle: "Titulo de la Nota",
       articleSubTitle:
@@ -49,15 +48,19 @@ export default {
       icons: {
         link1: {
           icon: "fab fa-facebook",
-          url: "www.facebook.com"
+          url: "www.facebook.com/cwgxio/"
         },
         link2: {
           icon: "fab fa-twitter",
-          url: "www.twitter.com"
+          url: "www.twitter.com/cwgxio"
         },
         link3: {
+          icon: "fab fa-linkedin",
+          url: "www.linkedin.com/company/cwgx/"
+        },
+        link4: {
           icon: "fab fa-instagram",
-          url: "www.instagram.com"
+          url: "www.instagram.com/cartwheel_galaxy/"
         }
       }
     };
@@ -109,7 +112,6 @@ export default {
   height: 100%;
   width: 100%;
   display: block;
-  
 }
 #newsContainer {
   padding-top: 10px;
