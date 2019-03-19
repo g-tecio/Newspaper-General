@@ -45,7 +45,7 @@ export default {
       articleTitle: "Titulo de la Nota",
       articleSubTitle:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed purus ullamcorper,consectetur adipiscing elit. Duis sed purus ullamcorperconsectetur adipiscing elit. Duis sed purus ullamcorper",
-      articleAuthor: "Jhon Ackerman",
+      articleAuthor: "Pablo Suarez",
       icons: {
         link1: {
           icon: "fab fa-facebook",

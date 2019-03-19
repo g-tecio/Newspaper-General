@@ -12,7 +12,7 @@
                 align-center
                 justify-end
             >
-                <v-btn :to="{name: 'article-id', params: { id: $store.state.articles[random].id, article: $store.state.articles[random] } }" flat color="red" slot="end">Show more</v-btn>
+                <v-btn :to="{name: 'article-id', params: { id: $store.state.articles[random].id, article: $store.state.articles[random] } }" flat color="red" slot="end">Mostrar más</v-btn>
             </v-layout>
         </v-card-actions>
     </v-card>

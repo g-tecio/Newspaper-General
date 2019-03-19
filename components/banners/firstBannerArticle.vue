@@ -11,7 +11,7 @@
       <v-flex xs7>
         <div id="info-content-2">
           <h4 class="headline">{{article.title}}</h4>
-          <p>{{article.info}}</p>
+          <!-- <p>{{article.info}}</p> -->
         </div>
       </v-flex>
     </v-layout>
@@ -24,10 +24,10 @@ export default {
     return {
       article: {
         id: '9dkA18Qs',
-        imageUrl: "https://picsum.photos/250/250/?image=" + Math.floor((Math.random() * 100) + 1),
-        title: "Times are changing",
+        imageUrl: "https://s3.amazonaws.com/events-prototype/11.jpeg",
+        title: "Invitan a cuatro empresas a licitación de refinería",
         info:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+          "La secretaria de Energía, Rocío Nahle entregó este lunes las invitaciones a cuatro empresas para participar en la licitación"
       }
     };
   }

@@ -18,16 +18,16 @@
         <v-flex xs12 md1>
           <ul class="footerLinks">
             <li>
-              <a href>Home</a>
+              <a href>Inicio</a>
             </li>
             <li>
-              <a href>Discovery</a>
+              <a href>Descubrir</a>
             </li>
             <li>
-              <a href>Photos</a>
+              <a href>Fotos</a>
             </li>
             <li>
-              <a href>Contact</a>
+              <a href>Contacto</a>
             </li>
           </ul>
         </v-flex>
@@ -35,20 +35,20 @@
         <v-flex xs12 md1>
           <ul class="footerLinks">
             <li>
-              <a href>About</a>
+              <a href>Acerca de</a>
             </li>
             <li>
-              <a href>Help</a>
+              <a href>Ayuda</a>
             </li>
             <li>
-              <a href>Terms</a>
+              <a href>Terminos y Condiciones</a>
             </li>
             <li>
-              <a href>Guidlines</a>
+              <a href>Políticas de privacidad</a>
             </li>
           </ul>
         </v-flex>
-        <v-flex xs12 md1>
+        <!-- <v-flex xs12 md1>
           <ul class="footerLinks">
             <li>
               <a href>Testimonials</a>
@@ -63,7 +63,7 @@
               <a href>Carrers</a>
             </li>
           </ul>
-        </v-flex>
+        </v-flex> -->
         <v-flex xs12 md3></v-flex>
         <v-flex xs12 md3>
           <v-btn v-for="icon in icons" :key="icon" class="mx-3" dark icon>
@@ -81,7 +81,7 @@
 
       <v-card-actions class="grey justify-center">
         &copy;2019 -
-        <strong>El General MX</strong>
+        <strong>Cartwheel Galaxy</strong>
       </v-card-actions>
     </v-card>
   </v-footer>

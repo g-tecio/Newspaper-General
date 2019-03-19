@@ -25,15 +25,15 @@ export default {
       responsive: true,
       responsiveInput: false,
       toolbar_options: [
-        { title: "World", img: 40},
-        { title: "Politics", img: 41},
-        { title: "Business", img: 42},
-        { title: "Opinion", img: 43},
-        { title: "Tech", img: 44},
-        { title: "Science", img: 45},
-        { title: "Health", img: 46},
-        { title: "Sports", img: 47},
-        { title: "Arts", img: 48},
+        { title: "Internacional", img: 40},
+        { title: "Política", img: 41},
+        { title: "Negocios", img: 42},
+        { title: "Opinión", img: 43},
+        { title: "Tecnología", img: 44},
+        { title: "Ciencia", img: 45},
+        { title: "Salud", img: 46},
+        { title: "Deportes", img: 47},
+        { title: "Artes", img: 48},
         // { title: "Books" },
         // { title: "Style" },
         // { title: "Food" }
@@ -54,6 +54,13 @@ export default {
   background-color: inherit;
 }
 #items-toolbar {
-  padding-left: 10px;
+  padding-left: 10px; 
+}
+
+@media screen and (min-width: 1268px){
+  #items-toolbar {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
 </style>

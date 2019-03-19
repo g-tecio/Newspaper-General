@@ -29,8 +29,8 @@
 export default {
   data() {
     return {
-      date: "March 19, 2019, Victoria de Durango, Durango",
-      button_options: [{ title: "Suscribe" }, { title: "Login" }]
+      date: "Marzo 19, 2019, Victoria de Durango, Durango",
+      button_options: [{ title: "Registrarse" }, { title: "Iniciar Sesión" }]
     };
   }
 };
