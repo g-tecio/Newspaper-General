@@ -29,8 +29,8 @@
 export default {
   data() {
     return {
-      date: "February 12, 2019, Victoria de Durango, Durango",
-      button_options: [{ title: "Suscribe" }, { title: "Login" }]
+      date: "February 12, 2019, Victoria de Durango, Duran",
+      button_options: [{ title: "Suscribe" }, { title: "Login" }, { title: "Upload Article", path:"/new_article" }]
     };
   }
 };
