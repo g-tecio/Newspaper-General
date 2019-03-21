@@ -12,16 +12,16 @@
                         <v-container grid-list-xl text-xs-center>
                             <v-layout row wrap>
                                 <v-flex xs12 md6>
-                                    <v-text-field v-model="article.properties.title" label="Title"/>
+                                    <v-text-field v-model="article.title" label="Title"/>
                                 </v-flex>
                                 <v-flex xs12 md6>
-                                    <v-text-field v-model="article.properties.subtitle" label="Subtitle"/>
+                                    <v-text-field v-model="article.subtitle" label="Subtitle"/>
                                 </v-flex>
                                 <v-flex md4>
-                                    <v-text-field v-model="article.properties.author" label="Author"/>
+                                    <v-text-field v-model="article.author" label="Author"/>
                                 </v-flex>
                                 <v-flex md4>
-                                    <v-text-field v-model="article.properties.location" label="Location"/>
+                                    <v-text-field v-model="article.location" label="Location"/>
                                 </v-flex>
                                 <v-flex xs12 md4>
                                     <v-card class="pa-4">
@@ -35,13 +35,12 @@
                                         >
                                     </v-card>
                                 </v-flex>
-                                <v-flex xs12>
-                                    <vue-editor v-model="article.properties.article"></vue-editor>
-                                    <!-- <v-textarea v-model="article.properties.article" label="Article"/> -->
-                                </v-flex>
-
                                 <v-flex xs12 md6>
-                                    <!-- <v-select v-model="article.date.time_zone" :items="time_zone" label="Time Zone"></v-select> -->
+                                    <v-select v-model="article.status" :items="article_status" label="Status"></v-select>
+                                </v-flex>
+                                <v-flex xs12>
+                                    <vue-editor v-model="article.article"></vue-editor>
+                                    <!-- <v-textarea v-model="article.properties.article" label="Article"/> -->
                                 </v-flex>
                                 <!-- <v-flex xs6 md3>
                                     <v-dialog
@@ -128,42 +127,32 @@ export default {
     },
     data() {
         return {
-        config: {
-            drawer: false
-        },
-        api_url: "https://ox8usqk4cd.execute-api.us-east-2.amazonaws.com/hackathon/events",
-        article: {
-            title: 'ArticleItem',
-            type: 'object',
-            properties: {
-                title: '',
-                subtitle: '',
+            config: {
+                drawer: false
+            },
+            api_url: "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/articles",
+            article: {
+                id: 'Q', //
+                title: 'Q',
+                subtitle: 'Q',
+                cover_image: 'Q',
                 article: '<h1>Put your article here</h1>',
-                author: '',
-                location: '',
-                cover_img:'',
-            }
-        },
-        event_type: ["Online", "Physical"],
-        event_attire: ["Casual", "Cooktail", "Formal", "Smart Casual"],
-        revenue_generation: ["Auction", "Dinner", "Gala", "Festival", "Trade Show"],
-        status: ["Pending", "Not started", "In progress", "Finished"],
-        time_zone: ["Pacific", "Central", "Mountain", "Eastern"],
-        reactive: true,
-        menu: false,
-        modal: false,
-        modal2: false,
+                author: 'Q',
+                location: 'Q',
+                date: 'Q',//
+                article_type: 'Q',//
+                status: 'Q',
+                editor_id: 'Q',
+                sentiment: 'Q'//
+            },
+            article_status: ["Borrador", "Publicado"],
         };
     },
     methods: {
         submitData() {
             debugger
             this.article
-            axios.post(this.api_url, this.article).then((res)=>{
-                console.log(res)
-                debugger
-            })
-
+            axios.post(this.api_url, this.article).then((res)=>{console.log('succes') })
             // this.$axios.post(this.api_url, this.article).then((res)=>{
             //     // this.$router.push('/event-list')
             //     debugger
