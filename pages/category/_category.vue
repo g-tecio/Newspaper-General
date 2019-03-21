@@ -5,11 +5,11 @@
 
       <navbar :config="config"/>
 
-      <banner/>
+      <!-- <banner/> -->
 
       <drawer :config="config"/>
 
-      <h1 style="border-bottom: 1px solid #000;">{{$route.params.category}}</h1>
+      <h1 style="border-bottom: 1px solid #000;">{{title}}</h1>
       <v-layout row wrap>
         <v-flex xs12 md4 class="articleBar">
           <articleBar/>
@@ -27,7 +27,7 @@
             </v-flex>
           </v-layout>
         </v-flex>
-        <h1>More of this Section</h1>
+        <h1>Más de esta sección</h1>
         <v-flex xs12 md12 class="moreSectionFlex">
           <v-layout row wrap>
             <v-flex xs12 md8>
@@ -112,6 +112,7 @@ import footerComp from "~/components/footerComp.vue";
 export default {
   data() {
     return {
+      title: this.$route.params.category.substring(0).toUpperCase(),
       config: {
         drawer: false
       }

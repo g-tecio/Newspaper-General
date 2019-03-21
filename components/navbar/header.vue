@@ -5,7 +5,7 @@
       <v-flex xs12 md4>
         <router-link to="/">
           <v-img
-            src="https://s3.amazonaws.com/newspaper-bucket-cwgx/Progressive+Oficial+Black+600.png"
+            src="https://www.elsiglodedurango.com.mx/m/files/ndurango/logod.png"
           ></v-img>
         </router-link>
       </v-flex>

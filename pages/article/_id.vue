@@ -5,7 +5,7 @@
 
       <navbar :config="config"/>
 
-      <banner/>
+      <!-- <banner/> -->
 
       <drawer :config="config"/>
       <br>

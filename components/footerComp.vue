@@ -10,7 +10,7 @@
       <v-card-title class="grey">
         <v-flex xs12 md3>
           <v-img
-            src="https://s3.amazonaws.com/newspaper-bucket-cwgx/Progressive+Oficial+Black+600.png"
+            src="https://www.elsiglodedurango.com.mx/m/files/ndurango/logod.png"
             height="90px"
             contain
           ></v-img>

@@ -10,7 +10,7 @@
       <v-list-tile avatar>
         <v-container>
           <v-img
-            src="https://s3.amazonaws.com/newspaper-bucket-cwgx/Progressive+Oficial+Black+600.png"
+            src="https://www.elsiglodedurango.com.mx/m/files/ndurango/logod.png"
             height="80px"
           ></v-img>
         </v-container>
@@ -19,7 +19,7 @@
 
     <v-list class="pt-0" dense>
       <v-divider></v-divider>
-      <v-list-tile v-for="item in toolbar_options" :key="item.path" :to="{name: 'category-category', params: { category: item.title, img: item.img } }">
+      <v-list-tile v-for="item in toolbar_options" :key="item.path" :to="{name: 'category-category', params: { category: item.name, img: item.img } }">
         <v-list-tile-content>
           <v-list-tile-title>{{ item.title }}</v-list-tile-title>
         </v-list-tile-content>
@@ -37,19 +37,14 @@ export default {
       responsive: false,
       responsiveInput: false,
       toolbar_options: [
-        { title: "Internacional", img: 40 },
-        { title: "Política", img: 41 },
-        { title: "Negocios", img: 42 },
-        { title: "Opinión", img: 43 },
-        { title: "Tecnología", img: 44 },
-        { title: "Ciencia", img: 45 },
-        { title: "Salud", img: 46 },
-        { title: "Deportes", img: 47 },
-        { title: "Artes", img: 48 }
-        // {title: 'Style'},
-        // {title: 'Food'},
-        // {title: 'Travel'},
-        // {title: 'Magazine'}
+        { title: "Durango", name: "durango", img: 41},
+        { title: "Justicia", name: "justicia", img: 42},
+        { title: "Regional", name: "regional", img: 43},
+        { title: "Nacional", name: "nacional", img: 44},
+        { title: "Internacional", name: "internacional",img: 45},
+        { title: "Deportes", name: "deportes",img: 46},
+        { title: "Kiosko", name: "kiosko",img: 47},
+        { title: "Nosotros", name: "nosotros",img: 48}
       ]
     };
   }

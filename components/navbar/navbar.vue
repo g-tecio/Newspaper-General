@@ -3,8 +3,8 @@
     <v-toolbar-items class="hidden-sm-and-down" id="items-toolbar">
       <v-btn
         v-for="item in toolbar_options"
-        :key="item.title"
-        :to="{name: 'category-category', params: { category: item.title, img: item.img } }"
+        :key="item.name"
+        :to="{name: 'category-category', params: { category: item.name, img: item.img } }"
         flat
       >{{ item.title }}</v-btn>
     </v-toolbar-items>
@@ -25,18 +25,14 @@ export default {
       responsive: true,
       responsiveInput: false,
       toolbar_options: [
-        { title: "Internacional", img: 40},
-        { title: "Política", img: 41},
-        { title: "Negocios", img: 42},
-        { title: "Opinión", img: 43},
-        { title: "Tecnología", img: 44},
-        { title: "Ciencia", img: 45},
-        { title: "Salud", img: 46},
-        { title: "Deportes", img: 47},
-        { title: "Artes", img: 48},
-        // { title: "Books" },
-        // { title: "Style" },
-        // { title: "Food" }
+        { title: "Durango", name: "durango", img: 41},
+        { title: "Justicia", name: "justicia", img: 42},
+        { title: "Regional", name: "regional", img: 43},
+        { title: "Nacional", name: "nacional", img: 44},
+        { title: "Internacional", name: "internacional",img: 45},
+        { title: "Deportes", name: "deportes",img: 46},
+        { title: "Kiosko", name: "kiosko",img: 47},
+        { title: "Nosotros", name: "nosotros",img: 48}
       ]
     };
   }
