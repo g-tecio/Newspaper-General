@@ -1,4 +1,4 @@
-<template>
+<template id="contenido_dev">
   <div>
     <v-container>
       <headerComp/>
@@ -15,6 +15,9 @@
           <v-flex xs12 md9>
             <v-layout row wrap>
               <v-flex xs12 md12 id="articleContainer" style="margin-right:5%">
+                <div id="info_div"></div>
+                {{info}}
+                {{value}}
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed purus ullamcorper, rutrum lacus vitae, sollicitudin augue. Proin rhoncus facilisis eros vel vestibulum. Nulla facilisi. Donec eu ex sed nulla congue imperdiet. Nulla facilisi. Quisque eleifend aliquet metus, tempor sodales neque condimentum sit amet. Aenean eu viverra lorem, sit amet eleifend erat. In suscipit hendrerit libero vitae auctor. Curabitur nibh nisl, egestas a nisl at, luctus eleifend sem</p>
                 <br>
                 <p>Vivamus id sollicitudin massa, vitae bibendum ipsum. Sed finibus neque eu enim convallis, et convallis tortor porta. Integer consequat commodo risus quis posuere. Quisque bibendum erat quis nulla lobortis gravida. Suspendisse potenti. Curabitur eget ullamcorper dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer quis ligula non ex ullamcorper maximus. Aliquam convallis, nisl eu cursus imperdiet, risus odio sodales magna, non sollicitudin mi ex eu est. Vivamus commodo enim at est tincidunt dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla maximus sollicitudin sem, quis tempus eros ultrices non. Suspendisse eget mauris erat. Sed nec eros at lectus tristique fermentum a a elit.</p>
@@ -29,6 +32,7 @@
                 <br>
                 <p>Vivamus id sollicitudin massa, vitae bibendum ipsum. Sed finibus neque eu enim convallis, et convallis tortor porta. Integer consequat commodo risus quis posuere. Quisque bibendum erat quis nulla lobortis gravida. Suspendisse potenti. Curabitur eget ullamcorper dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer quis ligula non ex ullamcorper maximus. Aliquam convallis, nisl eu cursus imperdiet, risus odio sodales magna, non sollicitudin mi ex eu est. Vivamus commodo enim at est tincidunt dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla maximus sollicitudin sem, quis tempus eros ultrices non. Suspendisse eget mauris erat. Sed nec eros at lectus tristique fermentum a a elit.</p>
                 <br>
+                <v-btn @click="printData()"></v-btn>
               </v-flex>
               <v-flex xs12 md6>
                 <articleWithImg style="border-top: 1px solid #000; border-right: 1px solid #000;"/>
@@ -48,6 +52,7 @@
     </v-container>
 
     <footerComp/>
+    <div id="test_div"></div>
   </div>
 </template>
 <script>
@@ -67,14 +72,29 @@ import afterFullContainer from "~/components/afterFullContainer.vue";
 import sideNews2 from "~/components/sideNews2.vue";
 import footerComp from "~/components/footerComp.vue";
 import seccionView from "~/components/seccionView.vue";
+import $ from "jquery";
+var axios = require("axios");
 /*$(document).ready(function() {
   alert("dbmndbs");
 });*/
+var value2 = "VALUE";
+$(document).ready(function() {
+  axios
+    .get("https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/articles")
+    .then(function(response) {
+      console.log(response.data); // ex.: { user: 'Your User'}
+      console.log(response.status); // ex.: 200
+      value2 = response.data[0].article;
+      console.log(this.value);
+      
+    });
+});
 export default {
   data() {
     return {
-      apiUrl: "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev",
-      info: "",
+      props: ["value"],
+      //apiUrl: "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev",
+      info: value2,
       config: {
         drawer: false
       },
@@ -115,15 +135,22 @@ export default {
   methods: {
     loadData() {
       axios
-        .get("https://api.coindesk.com/v1/bpi/currentprice.json")
-        .then(response => (this.info = response));
-      console.log("", this.info);
+        .get(
+          "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/articles"
+        )
+        .then(function(response) {
+          console.log(response.data); // ex.: { user: 'Your User'}
+          console.log(response.status); // ex.: 200
+        });
     },
     printData() {
-      //alert("vbvbv");
-      $(document).ready(function() {
-        alert("dbmndbs");
-      });
+      this.info=value2;
+      var estructura = "<h1>estrucutura</h1>";
+      info_div.innerHTML = this.info;
+      test_div.innerHTML = estructura;
+    },
+    printData2() {
+      alert("don't cry thonig");
     }
   }
 };
