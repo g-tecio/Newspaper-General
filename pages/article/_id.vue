@@ -67,10 +67,14 @@ import afterFullContainer from "~/components/afterFullContainer.vue";
 import sideNews2 from "~/components/sideNews2.vue";
 import footerComp from "~/components/footerComp.vue";
 import seccionView from "~/components/seccionView.vue";
-
+/*$(document).ready(function() {
+  alert("dbmndbs");
+});*/
 export default {
   data() {
     return {
+      apiUrl: "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev",
+      info: "",
       config: {
         drawer: false
       },
@@ -107,6 +111,20 @@ export default {
     sideArticle2,
     articleWithImg,
     articleWithoutImg
+  },
+  methods: {
+    loadData() {
+      axios
+        .get("https://api.coindesk.com/v1/bpi/currentprice.json")
+        .then(response => (this.info = response));
+      console.log("", this.info);
+    },
+    printData() {
+      //alert("vbvbv");
+      $(document).ready(function() {
+        alert("dbmndbs");
+      });
+    }
   }
 };
 </script>
