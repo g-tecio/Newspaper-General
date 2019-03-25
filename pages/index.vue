@@ -81,7 +81,7 @@ export default {
 #sideNews {
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
-padding-top: 10px;
+  padding-top: 10px;
 }
 #fullContainer {
   border-top: 1px solid #000;
@@ -89,5 +89,9 @@ padding-top: 10px;
 }
 #sideNews2{
   border-left: 1px solid #000;
+}
+
+.v-card {
+  box-shadow: none;
 }
 </style>

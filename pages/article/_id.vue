@@ -31,17 +31,17 @@
                 <br>
               </v-flex>
               <v-flex xs12 md6>
-                <articleWithImg style="border-top: 1px solid #000; border-right: 1px solid #000;"/>
+                <articleWithImg id="secondary-articles" style="border-top: 1px solid #000; border-right: 1px solid #000;"/>
               </v-flex>
               <v-flex xs12 md6>
-                <articleWithoutImg style="border-top: 1px solid #000;"/>
+                <articleWithoutImg id="secondary-articles" style="border-top: 1px solid #000;"/>
               </v-flex>
             </v-layout>
           </v-flex>
           <v-flex xs12 md3>
-            <sideNews style="border-left: 1px solid #000;"/>
-            <sideArticle2 style="border-left: 1px solid #000; border-top: 1px solid #000;"/>
-            <sideArticle2 style="border-left: 1px solid #000; border-top: 1px solid #000;"/>
+            <sideNews id="side-news"/>
+            <sideArticle2 id="side-article"/>
+            <sideArticle2 id="side-article"/>
           </v-flex>
         </v-layout>
       </v-layout>
@@ -50,6 +50,35 @@
     <footerComp/>
   </div>
 </template>
+
+<style>
+  #side-news {
+    border-left: 1px solid #000;
+  }
+  
+  #side-article {
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    padding: 5px;
+  }
+
+  @media screen and (max-width: 959px) {
+    #side-news {
+      border-left: none;
+    }
+
+    #side-article {
+      border-left: none;
+      border-top: none;
+    }
+
+    #secondary-articles {
+      display: none;
+    }
+  }
+</style>
+
+
 <script>
 import articleWithImg from "~/components/articles/articleWithImg.vue";
 import articleWithoutImg from "~/components/articles/articleWithoutImg.vue";

@@ -1,8 +1,8 @@
 <template>
   <v-card id="articleWithoutImg">
     <v-container>
-      <v-img class="white--text" height="130px" :src="$store.state.articles[page][random].imageUrl">
-        <v-container fill-height fluid>
+      <v-img id="card-image" class="white--text card-image" :src="$store.state.articles[page][random].imageUrl">
+        <v-container class="white-text-image" fill-height fluid>
           <v-layout fill-height>
             <v-flex xs12 align-end flexbox>
               <span class="headline">{{$store.state.articles[page][random].title}}</span>
@@ -33,7 +33,7 @@ export default {
     let random =  Math.floor(Math.random() * this.$store.state.articles[page].length);
     return {
       page: (this.$route.params.category) ? this.$route.params.category : "principal",
-      random: Math.floor(Math.random() * this.$store.state.articles[page].length),
+      random: Math.floor(Math.random() * this.$store.state.articles[page].length)
     };
   }
 };
@@ -41,10 +41,29 @@ export default {
 
 <style>
 #articleWithoutImg {
-  box-shadow: inherit;
+  box-shadow: inherit !important;
   background-color: inherit;
 }
 .theme--light.v-sheet {
   background-color: inherit;
 }
+.white-text-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2));
+}
+#card-image {
+  height: 130px;
+}
+
+@media screen and (max-width: 959px) {
+  #card-image {
+    height: 200px;
+  }
+}
+@media screen and (max-width: 700px) {
+  #card-image {
+    height: 300px;
+  }
+}
+
+
 </style>

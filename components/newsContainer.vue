@@ -1,13 +1,13 @@
 <template>
     <v-layout row wrap>
         <v-flex xs12 md6 id="article1">
-            <firstArticle/>
+            <secondArticle/>
         </v-flex>
         <v-flex xs12 md6 id="article2">
             <secondArticle/>
         </v-flex>
         <v-flex xs12 md6 id="article3">
-            <firstArticle/>
+            <secondArticle/>
         </v-flex>
         <v-flex xs12 md6 id="article4">
             <secondArticle/>
@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style>
+    
     #article1{
         border-bottom: 1px solid #000;
         border-right: 1px solid #000;
@@ -43,6 +44,16 @@ export default {
     }
     #article3{
         border-right: 1px solid #000;
+    }
+
+    @media screen  and (max-width: 959px){
+        #article1{
+            border-right: none;
+        }
+        #article3{
+            border-right: none;
+            border-bottom: 1px solid #000;
+        }
     }
 </style>
 

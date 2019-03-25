@@ -10,7 +10,7 @@
       <v-list-tile avatar>
         <v-container>
           <v-img
-            src="https://www.elsiglodedurango.com.mx/m/files/ndurango/logod.png"
+            src="https://s3.amazonaws.com/events-prototype/logo-el-siglo-de-durango.png"
             height="80px"
           ></v-img>
         </v-container>

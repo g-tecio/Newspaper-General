@@ -16,14 +16,14 @@
         </v-flex>
         <v-flex xs12 md8>
           <v-layout row wrap>
-            <v-flex xs12 md8>
-              <articleBar2 id="articleBar-layout"/>
-            </v-flex>
-            <v-flex xs12 md4 id="sideNews3-layout">
-              <sideNews3/>
-            </v-flex>
-            <v-flex xs12 md12>
+            <v-flex class="border-right" xs12 md12>
               <sideArticle2/>
+            </v-flex>
+            <v-flex id="articleBar-layout" xs12 md6>
+              <articleBar2/>
+            </v-flex>
+            <v-flex id="articleBar-layout" xs12 md6>
+              <articleBar2/>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -31,17 +31,16 @@
         <v-flex xs12 md12 class="moreSectionFlex">
           <v-layout row wrap>
             <v-flex xs12 md8>
-              <v-layout>
-                <v-flex xs12 md6 id="firstArticleLayout">
-                  <firstArticle/>
-                </v-flex>
-                <v-flex xs12 md6 id="firstArticleLayout2">
-                  <firstArticle/>
-                </v-flex>
-              </v-layout>
-              <v-flex xs12 md12>
-                <sideArticle2/>
+              <v-flex xs12 md12 id="firstArticleLayout">
+                <firstArticle/>
               </v-flex>
+              <v-flex xs12 md12 id="firstArticleLayout2">
+                <firstArticle/>
+              </v-flex>
+              <v-flex xs12 md12 id="firstArticleLayout2">
+                <firstArticle/>
+              </v-flex>
+
             </v-flex>
             <v-flex xs12 md4 id="sideNewsLayout">
               <sideNews2/>
@@ -65,7 +64,10 @@
 #sideNews {
   border-left: 1px solid #000;
 }
-.moreSectionFlex{
+.border-right {
+  border-right: 1px solid #000;
+}
+.moreSectionFlex {
   border-top: 2px solid #000;
 }
 #fullContainer {
@@ -75,22 +77,46 @@
 #sideNews {
   border-left: 1px solid #000;
 }
-#articleBar-layout{
+#articleBar-layout {
   border-right: 1px solid #000;
 }
-#sideNews3-layout{
+#sideNews3-layout {
   border-bottom: 1px solid #000;
   padding-top: 10px;
 }
-#firstArticleLayout{
-  border-right: 1px solid #000;
+#firstArticleLayout {
   border-bottom: 1px solid #000;
 }
-#firstArticleLayout2{
+#firstArticleLayout2 {
   border-bottom: 1px solid #000;
 }
-#sideNewsLayout{
+#sideNewsLayout {
   border-left: 1px solid #000;
+}
+
+@media screen and (max-width: 959px){
+  #sideNewsLayout {
+    border-left: none;
+  }
+
+  #firstArticleLayout {
+    border-right: none;
+  }
+
+  #articleBar-layout {
+    border-right: none;
+  }
+
+  #sideNews {
+    border-left: none;
+  }
+  .border-right {
+    border-right: none;
+  }
+
+  .articleBar {
+    border-right: none;
+  }
 }
 </style>
 <script>

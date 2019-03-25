@@ -10,7 +10,7 @@
       <v-card-title class="grey">
         <v-flex xs12 md3>
           <v-img
-            src="https://www.elsiglodedurango.com.mx/m/files/ndurango/logod.png"
+            src="https://s3.amazonaws.com/events-prototype/logo-el-siglo-de-durango.png"
             height="90px"
             contain
           ></v-img>

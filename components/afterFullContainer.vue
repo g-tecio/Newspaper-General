@@ -47,8 +47,27 @@ export default {
     }
     #afterFull4{
         border-top: 1px solid #000;
+        border-right: 1px solid #000;
     }
     #afterFull5{
         border-top: 1px solid #000;
+    }
+
+    @media screen and (max-width: 959px) {
+        #afterFull1{
+            border-right: none;
+            border-bottom: 1px solid #000;
+        }
+        #afterFull2{
+            border-right: none;
+            border-bottom: 1px solid #000;
+        }
+        #afterFull3{
+            border-bottom: 1px solid #000;
+        }
+        #afterFull4{
+            border-bottom: none;
+            border-right: none;
+        }
     }
 </style>
