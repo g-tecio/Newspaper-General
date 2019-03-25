@@ -1,4 +1,4 @@
-<template>
+<template id="main_template">
   <div>
     <v-container>
       <headerComp/>
@@ -11,7 +11,7 @@
 
       <v-layout row wrap>
         <v-flex xs12 md9 id="newsContainer">
-          <newsContainer/>
+          <newsContainer v-bind:config="value"/>
         </v-flex>
 
         <v-flex xs12 md3 id="sideNews" class="hidden-sm-and-down">
@@ -33,6 +33,10 @@
     </v-container>
 
     <footerComp/>
+    <!--
+    <div id="main_div"></div>
+    {{value}}
+    -->
   </div>
 </template>
 
@@ -48,10 +52,29 @@ import afterFullContainer from "~/components/afterFullContainer.vue";
 import sideNews2 from "~/components/sideNews2.vue";
 import footerComp from "~/components/footerComp.vue";
 import seccionView from "~/components/seccionView.vue";
+import $ from "jquery";
+var axios = require("axios");
 
+//$(document).ready(_this.getData());
 export default {
+  // created: function() {
+  //   var that = this;
+  //   axios
+  //     .get(
+  //       "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/articles"
+  //     )
+  //     .then(function(response) {
+  //       console.log(response.data[0]); // ex.: { user: 'Your User'}
+  //       console.log(response.status); // ex.: 200
+  //       //that.value = response.data[0].article;
+  //       that.value = response.data[0];
+  //       console.log(that.value);
+  //       //main_div.innerHTML = that.value;
+  //     });
+  // },
   data() {
     return {
+      value: {},
       config: {
         drawer: false
       }
@@ -81,13 +104,13 @@ export default {
 #sideNews {
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
-padding-top: 10px;
+  padding-top: 10px;
 }
 #fullContainer {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
-#sideNews2{
+#sideNews2 {
   border-left: 1px solid #000;
 }
 </style>

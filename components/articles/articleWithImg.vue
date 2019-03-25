@@ -19,7 +19,12 @@
       <v-card-actions>
         <v-btn flat disabled>{{article.date}}</v-btn>
         <v-layout align-center justify-end>
-          <v-btn :to="{name: 'article-id', params: { id: article.id, title: article.title, content: article.info, image: article.imageUrl } }" flat color="red" slot="end">Show more</v-btn>
+          <v-btn
+            :to="{name: 'article-id', params: { id: article.id, title: article.title, content: article.info, image: article.imageUrl } }"
+            flat
+            color="red"
+            slot="end"
+          >Show more</v-btn>
         </v-layout>
       </v-card-actions>
     </v-container>
@@ -28,10 +33,11 @@
 
 <script>
 export default {
+  props: ["config"],
   data() {
     return {
       article: {
-        id: '84AdweQo21',
+        id: "84AdweQo21",
         imageUrl: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",
         title: "Times are changing",
         info:
