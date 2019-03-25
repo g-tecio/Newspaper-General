@@ -3,7 +3,7 @@
     <v-container>
       <v-img id="card-image" class="white--text card-image" :src="$store.state.articles[page][random].imageUrl">
         <v-container class="white-text-image" fill-height fluid>
-          <v-layout fill-height>
+          <v-layout id="text-card-image" fill-height>
             <v-flex xs12 align-end flexbox>
               <span class="headline">{{$store.state.articles[page][random].title}}</span>
             </v-flex>
@@ -55,13 +55,21 @@ export default {
 }
 
 @media screen and (max-width: 959px) {
+  #text-card-image {
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+  }
   #card-image {
     height: 200px;
   }
 }
 @media screen and (max-width: 700px) {
   #card-image {
-    height: 300px;
+    text-align: center;
+    height: 275px;
   }
 }
 
