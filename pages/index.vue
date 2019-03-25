@@ -33,10 +33,8 @@
     </v-container>
 
     <footerComp/>
-    <!--
-    <div id="main_div"></div>
-    {{value}}
-    -->
+
+    <!-- <div id="main_div"></div> -->
   </div>
 </template>
 
@@ -52,8 +50,8 @@ import afterFullContainer from "~/components/afterFullContainer.vue";
 import sideNews2 from "~/components/sideNews2.vue";
 import footerComp from "~/components/footerComp.vue";
 import seccionView from "~/components/seccionView.vue";
-import $ from "jquery";
-var axios = require("axios");
+// import $ from "jquery";
+// var axios = require("axios");
 
 //$(document).ready(_this.getData());
 export default {
@@ -64,12 +62,13 @@ export default {
   //       "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/articles"
   //     )
   //     .then(function(response) {
+  //       let value2 = response.data[0].article;
   //       console.log(response.data[0]); // ex.: { user: 'Your User'}
   //       console.log(response.status); // ex.: 200
   //       //that.value = response.data[0].article;
   //       that.value = response.data[0];
   //       console.log(that.value);
-  //       //main_div.innerHTML = that.value;
+  //       main_div.innerHTML = value2;
   //     });
   // },
   data() {

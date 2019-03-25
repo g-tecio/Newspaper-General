@@ -1,11 +1,11 @@
 <template>
   <v-card id="articleWithoutImg">
     <v-container>
-      <v-img class="white--text" height="130px" :src="article.imageUrl">
+      <v-img class="white--text" height="130px" :src="value.cover_image">
         <v-container fill-height fluid>
           <v-layout fill-height>
             <v-flex xs12 align-end flexbox>
-              <span class="headline">{{article.title}}</span>
+              <span class="headline">{{value.title}}</span>
             </v-flex>
           </v-layout>
         </v-container>
@@ -13,14 +13,14 @@
 
       <v-card-title primary-title>
         <div>
-          <p>{{ article.info }}</p>
+          <p>{{ value.subtitle }}</p>
         </div>
       </v-card-title>
       <v-card-actions>
         <v-btn flat disabled>{{article.date}}</v-btn>
         <v-layout align-center justify-end>
           <v-btn
-            :to="{name: 'article-id', params: { id: article.id, title: article.title, content: article.info, image: article.imageUrl } }"
+            :to="{name: 'article-id', params: { id: value.id, title: value.title, content: value.subtitle, image: value.cover_image, author: value.author, article: value.article }  }"
             flat
             color="red"
             slot="end"
@@ -32,10 +32,28 @@
 </template>
 
 <script>
+import $ from "jquery";
+var axios = require("axios");
 export default {
+  created: function() {
+    var that = this;
+    axios
+      .get(
+        "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/articles"
+      )
+      .then(function(response) {
+        //console.log(response.data[0]); // ex.: { user: 'Your User'}
+        //console.log(response.status); // ex.: 200
+        //that.value = response.data[0].article;
+        that.value = response.data[5];
+        //console.log(that.value);
+        //main_div.innerHTML = that.value;
+      });
+  },
   props: ["config"],
   data() {
     return {
+      value: {},
       article: {
         id: "84AdweQo21",
         imageUrl: "https://cdn.vuetifyjs.com/images/cards/docks.jpg",

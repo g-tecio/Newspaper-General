@@ -6,7 +6,7 @@
           <h1 style="margin-top: 7%">{{config.title}}</h1>
           <p style="margin-right: 3%">{{config.content}}</p>
           <v-img :src="'https://picsum.photos/1024/400/?image=5'" alt="Avatar" class="avatar"/>
-          <p style="display: inline-block">by {{articleAuthor}}</p>
+          <p style="display: inline-block">by {{config.author}}</p>
         </v-flex>
         <v-layout row="wrap" style="margin-top:13%">
           <v-flex xs12 md6>
@@ -26,7 +26,6 @@
     </v-flex>
     <v-flex xs12 md8>
       <v-img
-
         :src="config.image"
         fluid-grow
         alt="Fluid-grow image"
@@ -37,10 +36,9 @@
 </template>
 <script>
 export default {
-  props: ['config'],
+  props: ["config"],
   data() {
     return {
-      
       fecha: " " + this.getFecha() + "",
       articleTitle: "Titulo de la Nota",
       articleSubTitle:
