@@ -14,7 +14,7 @@
         <v-layout row wrap>
           <v-flex xs12 md9>
             <v-layout row wrap>
-              <v-flex xs12 md12 id="articleContainer" style="margin-right:5%">
+              <v-flex xs12 md12 id="articleContainer" style="margin-right:5%; margin-top: 3%;">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed purus ullamcorper, rutrum lacus vitae, sollicitudin augue. Proin rhoncus facilisis eros vel vestibulum. Nulla facilisi. Donec eu ex sed nulla congue imperdiet. Nulla facilisi. Quisque eleifend aliquet metus, tempor sodales neque condimentum sit amet. Aenean eu viverra lorem, sit amet eleifend erat. In suscipit hendrerit libero vitae auctor. Curabitur nibh nisl, egestas a nisl at, luctus eleifend sem</p>
                 <br>
                 <p>Vivamus id sollicitudin massa, vitae bibendum ipsum. Sed finibus neque eu enim convallis, et convallis tortor porta. Integer consequat commodo risus quis posuere. Quisque bibendum erat quis nulla lobortis gravida. Suspendisse potenti. Curabitur eget ullamcorper dui. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer quis ligula non ex ullamcorper maximus. Aliquam convallis, nisl eu cursus imperdiet, risus odio sodales magna, non sollicitudin mi ex eu est. Vivamus commodo enim at est tincidunt dapibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla maximus sollicitudin sem, quis tempus eros ultrices non. Suspendisse eget mauris erat. Sed nec eros at lectus tristique fermentum a a elit.</p>
@@ -98,6 +98,11 @@ import footerComp from "~/components/footerComp.vue";
 import seccionView from "~/components/seccionView.vue";
 
 export default {
+  head() {
+    return {
+      title: this.$route.params.title
+    }
+  },
   data() {
     return {
       config: {

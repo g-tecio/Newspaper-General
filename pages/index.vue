@@ -50,6 +50,11 @@ import footerComp from "~/components/footerComp.vue";
 import seccionView from "~/components/seccionView.vue";
 
 export default {
+  head () {
+    return {
+      title: "El Siglo de Durango"
+    }
+  },
   data() {
     return {
       config: {

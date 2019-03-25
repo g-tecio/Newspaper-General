@@ -30,7 +30,7 @@
         :src="config.article.imageUrl"
         fluid-grow
         alt="Fluid-grow image"
-        style="max-width: 100%; height: auto; max-height: 400px"
+        style="max-width: 100%; height: auto; max-height: 400px;"
       />
     </v-flex>
   </v-layout>
@@ -112,6 +112,7 @@ export default {
   height: 100%;
   width: 100%;
   display: block;
+  margin-left: 3%;
 }
 #newsContainer {
   padding-top: 10px;
@@ -128,5 +129,11 @@ export default {
 }
 #sideNews2 {
   border-left: 1px solid #000;
+}
+
+@media screen and (max-width: 959px) {
+  .article-image {
+    margin-left: 0%;
+  }
 }
 </style>

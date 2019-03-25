@@ -136,6 +136,11 @@ import sideNews from "~/components/sideNews.vue";
 import sideNews2 from "~/components/sideNews2.vue";
 import footerComp from "~/components/footerComp.vue";
 export default {
+  head() {
+    return {
+      title: this.$route.params.category.substring(0).toUpperCase()
+    }
+  },
   data() {
     return {
       title: this.$route.params.category.substring(0).toUpperCase(),
