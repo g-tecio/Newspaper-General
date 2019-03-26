@@ -1,17 +1,18 @@
 <template>
-  <v-toolbar class="style_toolbar">
-    <v-toolbar-items class="hidden-sm-and-down" id="items-toolbar">
-      <v-btn
-        v-for="item in toolbar_options"
-        :key="item.name"
-        :to="{name: 'category-category', params: { category: item.name, img: item.img } }"
-        flat
-      >{{ item.title }}</v-btn>
-    </v-toolbar-items>
-    <v-menu class="hidden-md-and-up">
-      <v-toolbar-side-icon slot="activator" @click="config.drawer = true"></v-toolbar-side-icon>
-    </v-menu>
-  </v-toolbar>
+  <div>
+    <v-toolbar class="style_toolbar">
+      <v-toolbar-items class="hidden-lg" id="items-toolbar">
+        <v-btn
+          v-for="item in toolbar_options"
+          :key="item.name"
+          :to="{name: 'category-category', params: { category: item.name, img: item.img } }"
+          flat
+        >{{ item.title }}</v-btn>
+      </v-toolbar-items>
+    </v-toolbar>
+
+    
+  </div>
 </template>
 
 <script>
@@ -39,12 +40,18 @@ export default {
 };
 </script>
 
+
 <style>
 .style_toolbar {
   box-shadow: inherit;
   background-color: inherit;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
+
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 .theme--light.v-toolbar {
   background-color: inherit;

@@ -38,16 +38,12 @@
 <script>
 export default {
   data() {
-    let page = this.$route.params.category
-      ? this.$route.params.category
-      : "principal";
+    let page = this.$route.params.category ? this.$route.params.category : "principal";
     let random = Math.floor(
       Math.random() * this.$store.state.articles[page].length
     );
     return {
-      page: this.$route.params.category
-        ? this.$route.params.category
-        : "principal",
+      page: this.$route.params.category ? this.$route.params.category : "principal",
       random: Math.floor(
         Math.random() * this.$store.state.articles[page].length
       )

@@ -97,6 +97,7 @@ import sideNews2 from "~/components/sideNews2.vue";
 import footerComp from "~/components/footerComp.vue";
 import seccionView from "~/components/seccionView.vue";
 
+
 export default {
   head() {
     return {
