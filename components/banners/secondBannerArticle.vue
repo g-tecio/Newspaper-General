@@ -3,15 +3,15 @@
     <v-layout row>
       <v-flex xs5>
         <router-link
-          :to="{name: 'article-id', params: { id: article.id, title: article.title, content: article.info, image: article.urlImage } }"
+          :to="{name: 'article-id', params: { id: value.id, title: value.title, content: value.subtitle, image: value.cover_image, author: value.author, article: value.article } }"
         >
-          <v-img :src="article.urlImage" height="125px" contain></v-img>
+          <v-img :src="value.cover_image" height="125px" contain></v-img>
         </router-link>
       </v-flex>
       <v-flex xs7>
         <div id="info-content-2">
-          <h4 class="headline">{{article.title}}</h4>
-          <p>{{article.info}}</p>
+          <h4 class="headline">{{value.title}}</h4>
+          <p>{{value.subtitle}}</p>
         </div>
       </v-flex>
     </v-layout>
@@ -19,16 +19,25 @@
 </template>
 
 <script>
+import $ from "jquery";
+var axios = require("axios");
 export default {
+  created: function() {
+    var that = this;
+    axios
+      .get(
+        "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/randpost"
+      )
+      .then(function(response) {
+        that.value = response.data;
+      });
+  },
   data() {
     return {
-      article: {
-        id: '9dka123s',
-        urlImage: "https://cdn.vuetifyjs.com/images/cards/halcyon.png",
-        title: "Times are changing",
-        info:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-      }
+      value: {},
+      title: "Times are changing",
+      info:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     };
   }
 };

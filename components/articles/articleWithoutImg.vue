@@ -30,13 +30,13 @@ export default {
     var that = this;
     axios
       .get(
-        "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/articles"
+        "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/randpost"
       )
       .then(function(response) {
-        console.log(response.data[0]); // ex.: { user: 'Your User'}
-        console.log(response.status); // ex.: 200
+        //console.log(response.data[0]); // ex.: { user: 'Your User'}
+        //console.log(response.status); // ex.: 200
         //that.value = response.data[0].article;
-        that.value = response.data[5];
+        that.value = response.data;
         console.log(that.value);
         //main_div.innerHTML = that.value;
       });

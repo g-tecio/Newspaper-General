@@ -1,48 +1,64 @@
 <template>
-    <v-card id="sideArticle3">
-        <v-card-title primary-title id="sideArticle3Title">
-            <div>
-                <h1 class="headline mb-0">{{title}}</h1>
-                <p>{{info}}</p>
-            </div>
-        </v-card-title>
-        <v-card-actions>
-            <v-btn flat disabled>{{date}}</v-btn>
-            <v-layout
-                align-center
-                justify-end
-            >
-                <v-btn flat color="red" slot="end">Show more</v-btn>
-            </v-layout>
-        </v-card-actions>
-    </v-card>
+  <v-card id="sideArticle3">
+    <v-card-title primary-title id="sideArticle3Title">
+      <div>
+        <h1 class="headline mb-0">{{value.title}}</h1>
+        <p>{{value.subtitle}}</p>
+      </div>
+    </v-card-title>
+    <v-card-actions>
+      <v-btn flat disabled>{{value.date}}</v-btn>
+      <v-layout align-center justify-end>
+        <v-btn
+          :to="{name: 'article-id', params: { id: value.id, title: value.title, content: value.subtitle, image: value.cover_image, author: value.author, article: value.article }  }"
+          flat
+          color="red"
+          slot="end"
+        >Show more</v-btn>
+      </v-layout>
+    </v-card-actions>
+  </v-card>
 </template>
 
 <script>
+import $ from "jquery";
+var axios = require("axios");
 export default {
-    data () {
-        return {
-            title: 'Times are changing',
-            info: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-            date: 'February 12, 2019'
-        }
-    }
-}
+  created: function() {
+    var that = this;
+    axios
+      .get(
+        "https://o2dstvq9sb.execute-api.us-west-2.amazonaws.com/dev/randpost"
+      )
+      .then(function(response) {
+        that.value = response.data;
+      });
+  },
+  data() {
+    return {
+      value: {},
+      title: "Times are changing",
+      info:
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry, Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+      date: "February 12, 2019"
+    };
+  }
+};
 </script>
 
 <style>
-    #sideArticle3{
-        box-shadow: inherit;
-        background-color: inherit;
-        padding: 5px;
-    }
-    #sideArticle3Title h1{
-        text-align: center;
-    }
-    #sideArticle3Title p{
-        text-align: center;
-    }
-    .theme--light.v-sheet{
-        background-color: inherit;
-    }
+#sideArticle3 {
+  box-shadow: inherit;
+  background-color: inherit;
+  padding: 5px;
+}
+#sideArticle3Title h1 {
+  text-align: center;
+}
+#sideArticle3Title p {
+  text-align: center;
+}
+.theme--light.v-sheet {
+  background-color: inherit;
+}
 </style>
