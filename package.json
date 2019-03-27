@@ -1,14 +1,14 @@
 {
   "name": "Progressive",
   "version": "1.0.0",
-  "description": "My dandy Nuxt.js project",
-  "author": "sirzs",
+  "description": "Progressive newspaper CwGx",
+  "author": "Sirzs, Camus",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "build": "nuxt build",
     "start": "cross-env NODE_ENV=production node server/index.js",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate --spa"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.15",
@@ -28,5 +28,11 @@
     "nodemon": "^1.18.9",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
+  },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0",
+      "port": "80"
+    }
   }
 }

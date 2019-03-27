@@ -60,6 +60,13 @@ export default {
   padding-left: 10px; 
 }
 
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    height: 0px;
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+
 @media screen and (min-width: 1268px){
   #items-toolbar {
     padding-left: 10%;

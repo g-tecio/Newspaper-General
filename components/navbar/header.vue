@@ -13,13 +13,7 @@
       <v-toolbar class="hidden-sm-and-down" id="info-toolbar">
         <v-btn flat small disabled>{{date}}</v-btn>
         <v-spacer></v-spacer>
-        <v-btn
-          v-for="item in button_options"
-          :key="item"
-          :to="item.path"
-          flat
-          small
-        >{{ item.title }}</v-btn>
+        <v-btn flat small disabled>Demo para "El Siglo de Durango"</v-btn>
       </v-toolbar>
     </v-layout>
   </v-container>
