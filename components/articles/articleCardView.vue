@@ -4,7 +4,7 @@
       <v-layout row wrap>
         <v-flex xs12 md12>
           <h1 style="margin-top: 7%">{{config.article.title}}</h1>
-          <p style="margin-right: 3%">{{config.article.info}}</p>
+          <p id="articleInfo" style="margin-right: 3%">{{config.article.info}}</p>
           <v-img :src="'https://picsum.photos/1024/400/?image=5'" alt="Avatar" class="avatar"/>
           <p style="display: inline-block">by {{articleAuthor}}</p>
         </v-flex>
