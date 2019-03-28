@@ -1,10 +1,8 @@
 <template>
   <v-card id="sideArticle">
-    <v-card-title primary-title>
-      <div>
-        <h1 class="headline mb-0">{{$store.state.articles[page][random].title}}</h1>
-      </div>
-    </v-card-title>
+    <div class="titleSide">
+      <h2 class="titleSideNew">{{$store.state.articles[page][random].title}}</h2>
+    </div>
     <v-card-actions id="sideArticleActions">
       <v-btn flat disabled>{{$store.state.articles[page][random].date}}</v-btn>
       <v-layout align-center justify-end>
@@ -33,11 +31,21 @@ export default {
   background-color: inherit;
   padding: 5px;
 }
+.titleSide{
+  padding: 15px;
+}
 .theme--light.v-sheet {
   background-color: inherit;
 }
 #sideArticleActions .v-btn__content{
   font-size: 12px;
+}
+.titleSideNew{
+  font-size: 22px !important;
+  font-weight: 400;
+  line-height: 32px !important;
+  letter-spacing: normal !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 </style>
 

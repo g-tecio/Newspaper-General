@@ -69,8 +69,17 @@ export default {
 
 @media screen and (min-width: 1268px){
   #items-toolbar {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 12%;
+    padding-right: 12%;
+  }
+}
+
+@media screen and (max-width: 959px){
+  .v-toolbar__content, .v-toolbar__extension{
+    padding: 0;
+  }
+  #items-toolbar{
+    padding-left: 0;
   }
 }
 </style>

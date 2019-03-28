@@ -80,13 +80,12 @@ export default {
 
 <style>
 #newsContainer {
-  padding-top: 10px;
+  padding-top: 0;
   border-bottom: 2px solid #000;
 }
 #sideNews {
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
-  padding-top: 10px;
 }
 #fullContainer {
   border-top: 1px solid #000;
