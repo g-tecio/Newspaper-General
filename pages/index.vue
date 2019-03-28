@@ -98,4 +98,5 @@ export default {
 .v-card {
   box-shadow: none;
 }
+
 </style>

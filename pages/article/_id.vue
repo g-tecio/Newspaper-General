@@ -1,8 +1,21 @@
 <template>
-  <div>
-    <v-container>
+  <div id="main-container">
+    <v-toolbar class="reader-toolbar">
+      <v-spacer></v-spacer>
+      <v-toolbar-items>
+        <v-btn class="btn-reader" flat icon color="black" v-on:click="backgroundChange()">
+          <v-icon>remove_red_eye</v-icon>
+        </v-btn>
+        <v-btn class="btn-reader" flat icon color="black" v-on:click="fontSizeChange()">
+          <v-icon>text_fields</v-icon>
+        </v-btn>
+      </v-toolbar-items>
+      
+    </v-toolbar>
+    <v-container id="content-container">
+      
       <headerComp/>
-
+      
       <navbar :config="config"/>
 
       <!-- <banner/> -->
@@ -54,6 +67,25 @@
     border-left: 1px solid #000;
     padding: 10px;
   }
+  .btn-reader {
+    float: right;
+    margin-bottom: 10px;
+  }
+
+  .reader-toolbar {
+    box-shadow: inherit;
+    background-color: #9D9D9D !important;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  
+
+  @media screen and (min-width: 959px){
+    .reader-toolbar {
+      display: none;
+    }
+  }
 
   @media screen and (max-width: 959px) {
     #side-news {
@@ -72,6 +104,9 @@
 
     #secondary-articles {
       display: none;
+    }
+    #content-container {
+      margin-top: 40px;
     }
   }
 </style>
@@ -98,12 +133,17 @@ import seccionView from "~/components/seccionView.vue";
 
 export default {
   head() {
+    let readerView = false;
+    let fontSize = false;
     return {
-      title: this.$route.params.title
+      title: this.$route.params.title,
+      readerView: false,
+      fontSize: false
     }
   },
   data() {
     return {
+      label: "desactivada",
       config: {
         drawer: false
       },
@@ -140,6 +180,34 @@ export default {
     sideArticle2,
     articleWithImg,
     articleWithoutImg
+  },
+  methods: {
+    backgroundChange: function () {
+      var content = document.getElementById('main-container');
+      if (!this.readerView) {
+        content.style.background = "#FBF0D9";
+        content.style.color = "#5F4B32";
+        this.readerView = !this.readerView;
+      } else {
+        content.style.background = "#FAFAFA";
+        content.style.color = "#000";
+        this.readerView = !this.readerView;
+      }
+      
+    },
+    fontSizeChange: function () {
+      var text = document.getElementById('articleContainer');
+      var info = document.getElementById('articleInfo');
+      if (!this.fontSize) {
+        text.style.fontSize = "24px";
+        info.style.fontSize = "24px";
+        this.fontSize = !this.fontSize;
+      } else {
+        text.style.fontSize = "14px";
+        info.style.fontSize = "14px";
+        this.fontSize = !this.fontSize;
+      }
+    }
   }
 };
 </script>
