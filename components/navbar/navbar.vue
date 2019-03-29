@@ -5,7 +5,7 @@
         <v-btn
           v-for="item in toolbar_options"
           :key="item.name"
-          :to="{name: 'category-category', params: { category: item.name, img: item.img } }"
+          :to="{name: 'category-category', params: { category: item.name, obj: item } }"
           flat
         >{{ item.title }}</v-btn>
       </v-toolbar-items>
@@ -26,14 +26,14 @@ export default {
       responsive: true,
       responsiveInput: false,
       toolbar_options: [
-        { title: "Durango", name: "durango", img: 41},
-        { title: "Justicia", name: "justicia", img: 42},
-        { title: "Regional", name: "regional", img: 43},
-        { title: "Nacional", name: "nacional", img: 44},
-        { title: "Internacional", name: "internacional",img: 45},
-        { title: "Deportes", name: "deportes",img: 46},
-        { title: "Kiosko", name: "kiosko",img: 47},
-        { title: "Nosotros", name: "nosotros",img: 48}
+        { title: "Durango", name: "durango", img: "https://dnhlxboen03kq.cloudfront.net/Durango230.png", color: "#0051AF"},
+        { title: "Justicia", name: "justicia", img: "https://dnhlxboen03kq.cloudfront.net/Justicia230.png", color: "#9A2E00"},
+        { title: "Regional", name: "regional", img: "https://dnhlxboen03kq.cloudfront.net/Regional230.png", color: "#9A9400"},
+        { title: "Nacional", name: "nacional", img: "https://dnhlxboen03kq.cloudfront.net/Nacional230.png", color: "#FF6007"},
+        { title: "Internacional", name: "internacional", img: "https://dnhlxboen03kq.cloudfront.net/Intenacional230.png", color: "#D60000"},
+        { title: "Deportes", name: "deportes", img: "https://dnhlxboen03kq.cloudfront.net/Deportes230.png", color: "#399A00"},
+        { title: "Kiosko", name: "kiosko", img: "https://dnhlxboen03kq.cloudfront.net/Kiosko230.png", color: "#56009A"},
+        { title: "Nosotros", name: "nosotros" ,img: "https://dnhlxboen03kq.cloudfront.net/Nosotros230.png", color: "#9D315F"}
       ]
     };
   }

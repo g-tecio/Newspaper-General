@@ -8,8 +8,10 @@
       <!-- <banner/> -->
 
       <drawer :config="config"/>
-
-      <h1 style="border-bottom: 1px solid #000;">{{title}}</h1>
+      <div class="category-title" :style="'background-color: ' + $route.params.obj.color + ';'">
+        <v-img class="category-image" width="30%" height="80%" :src="$route.params.obj.img"></v-img>
+      </div>
+      
       <v-layout row wrap>
         <v-flex xs12 md4 class="articleBar">
           <articleBar/>
@@ -53,6 +55,9 @@
   </div>
 </template>
 <style>
+.category-title {
+  padding: 1%;
+}
 .articleBar {
   border-right: 1px solid #000;
   border-bottom: 2px solid #000;
@@ -131,29 +136,26 @@ import sideArticle from "~/components/sideArticles/sideArticle1.vue";
 import header from "~/components/navbar/header.vue";
 import navbar from "~/components/navbar/navbar.vue";
 import banner from "~/components/navbar/banner.vue";
-import drawer from "~/components/navbar/drawer.vue";
 import sideNews from "~/components/sideNews.vue";
 import sideNews2 from "~/components/sideNews2.vue";
 import footerComp from "~/components/footerComp.vue";
+
 export default {
   head() {
     return {
-      title: this.$route.params.category.substring(0).toUpperCase()
+      title: this.$route.params.obj.title.substring(0).toUpperCase()
     }
   },
   data() {
     return {
-      title: this.$route.params.category.substring(0).toUpperCase(),
-      config: {
-        drawer: false
-      }
+
+      title: this.$route.params.obj.title.substring(0).toUpperCase(),
     };
   },
   components: {
     headerComp: header,
     navbar,
     banner,
-    drawer,
     sideNews,
     sideNews2,
     footerComp,
