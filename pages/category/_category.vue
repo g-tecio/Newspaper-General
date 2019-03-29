@@ -9,7 +9,7 @@
 
       <drawer :config="config"/>
 
-      <h1 style="border-bottom: 1px solid #000;">{{title}}</h1>
+      <h1 id="titleCategory">{{title}}</h1>
       <v-layout row wrap>
         <v-flex xs12 md4 class="articleBar">
           <articleBar/>
@@ -52,6 +52,9 @@
   </div>
 </template>
 <style>
+#titleCategory{
+  border-bottom: 1px solid #000;
+}
 .articleBar {
   border-right: 1px solid #000;
   border-bottom: 2px solid #000;

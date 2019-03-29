@@ -39,7 +39,7 @@ export default {
   padding-top: 5px;
   box-shadow: inherit;
   background-color: inherit;
-  padding-left: 5px;
+  padding-left: 20px;
 }
 .theme--light.v-sheet {
   background-color: inherit;

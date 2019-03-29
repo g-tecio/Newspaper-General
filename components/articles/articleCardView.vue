@@ -103,7 +103,7 @@ export default {
   color: grey;
 }
 #dateItems{
-  padding-top: 50%;
+  padding-top: 10%;
 }
 .avatar {
   vertical-align: middle;

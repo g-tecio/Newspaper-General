@@ -42,7 +42,7 @@
           <v-flex xs12 md3>
 
             <sideArticle2 id="side-article"/>
-            <sideArticle2 id="side-article2"/>
+            <sideArticle3 id="side-article2"/>
           </v-flex>
         </v-layout>
       </v-layout>
@@ -117,6 +117,7 @@ import articleWithImg from "~/components/articles/articleWithImg.vue";
 import articleWithoutImg from "~/components/articles/articleWithoutImg.vue";
 import sideArticle1 from "~/components/sideArticles/sideArticle1.vue";
 import sideArticle2 from "~/components/sideArticles/sideArticle2.vue";
+import sideArticle3 from "~/components/sideArticles/sideArticle3.vue";
 import articleCardView from "~/components/articles/articleCardView.vue";
 import header from "~/components/navbar/header.vue";
 import navbar from "~/components/navbar/navbar.vue";
@@ -178,6 +179,7 @@ export default {
     articleCardView,
     sideArticle1,
     sideArticle2,
+    sideArticle3,
     articleWithImg,
     articleWithoutImg
   },

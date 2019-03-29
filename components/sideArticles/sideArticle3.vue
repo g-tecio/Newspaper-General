@@ -6,7 +6,7 @@
                 <p>{{$store.state.articles[page][random].info}}</p>
             </div>
         </v-card-title>
-        <v-card-actions>
+        <v-card-actions id="sideArticleActions3">
             <v-btn flat disabled>{{$store.state.articles[page][random].date}}</v-btn>
             <v-layout
                 align-center
@@ -46,5 +46,8 @@ export default {
     }
     .theme--light.v-sheet{
         background-color: inherit;
+    }
+    #sideArticleActions3 .v-btn__content{
+        font-size: 12px;
     }
 </style>

@@ -32,7 +32,7 @@ export default {
   padding: 5px;
 }
 .titleSide{
-  padding: 15px;
+  padding: 5%;
 }
 .theme--light.v-sheet {
   background-color: inherit;
