@@ -10,7 +10,7 @@
       <drawer :config="config"/>
 
       <v-layout row wrap>
-        <v-flex xs12 md9 id="newsContainer">
+        <v-flex xs12 md9 id="newsContainerFirst">
           <newsContainer/>
         </v-flex>
 
@@ -79,14 +79,12 @@ export default {
 </script>
 
 <style>
-#newsContainer {
-  padding-top: 10px;
+#newsContainerFirst {
   border-bottom: 2px solid #000;
 }
 #sideNews {
   border-left: 1px solid #000;
   border-bottom: 1px solid #000;
-  padding-top: 10px;
 }
 #fullContainer {
   border-top: 1px solid #000;

@@ -9,7 +9,7 @@
         <v-flex xs12 md2 id="bannerArticle">
             <finance/>
         </v-flex>
-        <v-flex xs12 md2 id="bannerArticle">
+        <v-flex xs12 md2 id="bannerArticleLast">
             <weather/>
         </v-flex>
     </v-layout>
@@ -42,8 +42,7 @@ export default {
         border-bottom: 2px solid #000;
     }
     #bannerArticle{
-        padding-top: 10px;
-        padding-bottom: 10px;
+        border-right: 1px solid #000;
     }
 </style>
 

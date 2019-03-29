@@ -29,9 +29,9 @@ export default {
 
 <style>
     #financeArticleStyle{
+        padding-top: 5px;
         box-shadow: inherit;
         background-color: inherit;
-        border-right: 1px solid #000;
     }
     .theme--light.v-sheet{
         background-color: inherit;

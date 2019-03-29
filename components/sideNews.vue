@@ -19,6 +19,7 @@ export default {
 
 <style>
   #side-article1{
+    padding: 2px;
     border-bottom: 1px solid #000;
     box-shadow: none;
   }

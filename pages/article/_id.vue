@@ -21,14 +21,15 @@
       <!-- <banner/> -->
 
       <drawer :config="config"/>
-      <br>
       <v-layout row wrap>
         <articleCardView :config="$route.params"/>
         <v-layout row wrap>
           <v-flex xs12 md9>
             <v-layout row wrap>
               <v-flex xs12 md12 id="articleContainer" style="margin-right:5%; margin-top: 3%;">
-                <p>{{$route.params.article.articleContent}}</p>
+                <v-container>
+                  <p>{{$route.params.article.articleContent}}</p>
+                </v-container>
               </v-flex>
               <v-flex xs12 md6>
                 <articleWithImg id="secondary-articles" style="border-top: 1px solid #000; border-right: 1px solid #000;"/>
@@ -41,7 +42,7 @@
           <v-flex xs12 md3>
 
             <sideArticle2 id="side-article"/>
-            <sideArticle2 id="side-article"/>
+            <sideArticle3 id="side-article2"/>
           </v-flex>
         </v-layout>
       </v-layout>
@@ -58,8 +59,13 @@
   
   #side-article {
     border-left: 1px solid #000;
-    border-top: 1px solid #000;
-    padding: 5px;
+    border-bottom: 1px solid #000;
+    padding: 10px;
+  }
+
+  #side-article2{
+    border-left: 1px solid #000;
+    padding: 10px;
   }
   .btn-reader {
     float: right;
@@ -87,8 +93,13 @@
     }
 
     #side-article {
-      border-left: none;
       border-top: none;
+      border-left: none;
+      border-bottom: none;
+    }
+
+    #side-article2 {
+      border-left: none;
     }
 
     #secondary-articles {
@@ -106,6 +117,7 @@ import articleWithImg from "~/components/articles/articleWithImg.vue";
 import articleWithoutImg from "~/components/articles/articleWithoutImg.vue";
 import sideArticle1 from "~/components/sideArticles/sideArticle1.vue";
 import sideArticle2 from "~/components/sideArticles/sideArticle2.vue";
+import sideArticle3 from "~/components/sideArticles/sideArticle3.vue";
 import articleCardView from "~/components/articles/articleCardView.vue";
 import header from "~/components/navbar/header.vue";
 import navbar from "~/components/navbar/navbar.vue";
@@ -167,6 +179,7 @@ export default {
     articleCardView,
     sideArticle1,
     sideArticle2,
+    sideArticle3,
     articleWithImg,
     articleWithoutImg
   },

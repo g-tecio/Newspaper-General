@@ -30,6 +30,7 @@ export default {
 
 <style>
     #weatherArticleStyle{
+        padding-top: 5px;
         box-shadow: inherit;
         background-color: inherit;
     }

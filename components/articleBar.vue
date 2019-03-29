@@ -1,6 +1,6 @@
 <template>
   <div>
-    <secondArticle id="articleBar1"/>
+    <firstArticle id="articleBar1"/>
     <firstArticle id="articleBar1"/>
     <sideArticle/>
   </div>

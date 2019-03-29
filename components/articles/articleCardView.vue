@@ -1,39 +1,36 @@
 <template>
-  <v-layout row wrap>
-    <v-flex xs12 md4>
-      <v-layout row wrap>
-        <v-flex xs12 md12>
-          <h1 style="margin-top: 7%">{{config.article.title}}</h1>
-          <p id="articleInfo" style="margin-right: 3%">{{config.article.info}}</p>
-          <v-img :src="'https://picsum.photos/1024/400/?image=5'" alt="Avatar" class="avatar"/>
-          <p style="display: inline-block">by {{articleAuthor}}</p>
-        </v-flex>
-        <v-layout row="wrap" style="margin-top:13%">
-          <v-flex xs12 md6>
-            <h2 style="color:grey;">{{fecha}}</h2>
+  <v-container class="articleCardContent">
+    <v-layout row wrap>
+      <v-flex xs12 md4>
+        <v-layout row wrap>
+          <v-flex xs12 md12>
+              <h1>{{config.article.title}}</h1>
+              <p id="articleInfo">{{config.article.info}}</p>
+              <v-img :src="'https://picsum.photos/1024/400/?image=5'" alt="Avatar" class="avatar"/>
+              <p style="display: inline-block">by {{articleAuthor}}</p>
           </v-flex>
-          <v-flex xs12 md6 class="icons">
-            <v-btn v-for="icon in icons" :key="icon" class="mx-1 icons" dark icon>
-              <a target="blank" :href="'https://' + icon.url" class="footerLinks2">
-                <v-icon size="24px">{{ icon.icon }}</v-icon>
-              </a>
-            </v-btn>
-          </v-flex>
+          <v-layout id="dateItems"  align-center justify-end>
+            <v-flex xs12 md5>
+              <h2 style="color:grey;">{{fecha}}</h2>
+            </v-flex>
+            <v-flex xs12 md7 class="icons">
+              <v-btn v-for="icon in icons" :key="icon" class="mx-1 icons" dark icon>
+                <a target="blank" :href="'https://' + icon.url" class="footerLinks2">
+                  <v-icon size="20px">{{ icon.icon }}</v-icon>
+                </a>
+              </v-btn>
+            </v-flex>
+          </v-layout>
         </v-layout>
-      </v-layout>
-
-      <div></div>
-    </v-flex>
-    <v-flex xs12 md8>
-      <v-img
-        class="article-image"
-        :src="config.article.imageUrl"
-        fluid-grow
-        alt="Fluid-grow image"
-        style="max-width: 100%; height: auto; max-height: 400px;"
-      />
-    </v-flex>
-  </v-layout>
+      </v-flex>
+      <v-flex xs12 md8>
+        <v-img
+          class="article-image"
+          :src="config.article.imageUrl"
+        />
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 <script>
 export default {
@@ -60,7 +57,7 @@ export default {
         },
         link4: {
           icon: "fab fa-instagram",
-          url: "www.instagram.com/cartwheel_galaxy/"
+          url: ""
         }
       }
     };
@@ -76,9 +73,13 @@ export default {
 };
 </script>
 <style>
-.icons {
-  float: right;
-  /*margin-top: 24%;*/
+.articleCardContent{
+  border-bottom: 1px solid #000;
+}
+.icons{
+  display: flex;
+  justify-items: end;
+  justify-content: end;
 }
 .footerLinks2 {
   list-style: none;
@@ -101,6 +102,9 @@ export default {
 .footerLinks2 a:hover {
   color: grey;
 }
+#dateItems{
+  padding-top: 10%;
+}
 .avatar {
   vertical-align: middle;
   width: 30px;
@@ -109,7 +113,7 @@ export default {
   display: inline-block;
 }
 .article-image {
-  height: 100%;
+  max-height: 400px;
   width: 100%;
   display: block;
   margin-left: 3%;
@@ -134,6 +138,12 @@ export default {
 @media screen and (max-width: 959px) {
   .article-image {
     margin-left: 0%;
+  }
+  #dateItems{
+  padding-top: 15%;
+  }
+  .articleCardContent{
+    border-bottom: none;
   }
 }
 </style>

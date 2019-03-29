@@ -11,21 +11,20 @@
       <div class="category-title" :style="'background-color: ' + $route.params.obj.color + ';'">
         <v-img class="category-image" width="30%" height="80%" :src="$route.params.obj.img"></v-img>
       </div>
-      
       <v-layout row wrap>
         <v-flex xs12 md4 class="articleBar">
           <articleBar/>
         </v-flex>
-        <v-flex xs12 md8>
+        <v-flex xs12 md8 class="articlesCategoryRight">
           <v-layout row wrap>
-            <v-flex class="border-right" xs12 md12>
+            <v-flex xs12 md12>
               <sideArticle2/>
             </v-flex>
             <v-flex id="articleBar-layout" xs12 md6>
-              <articleBar2/>
+              <secondArticle/>
             </v-flex>
-            <v-flex id="articleBar-layout" xs12 md6>
-              <articleBar2/>
+            <v-flex xs12 md6>
+              <secondArticle/>
             </v-flex>
           </v-layout>
         </v-flex>
@@ -39,10 +38,9 @@
               <v-flex xs12 md12 id="firstArticleLayout2">
                 <firstArticle/>
               </v-flex>
-              <v-flex xs12 md12 id="firstArticleLayout2">
+              <v-flex xs12 md12 id="firstArticleLayout3">
                 <firstArticle/>
               </v-flex>
-
             </v-flex>
             <v-flex xs12 md4 id="sideNewsLayout">
               <sideNews2/>
@@ -69,7 +67,7 @@
 #sideNews {
   border-left: 1px solid #000;
 }
-.border-right {
+#articleBar-layout{
   border-right: 1px solid #000;
 }
 .moreSectionFlex {
@@ -82,8 +80,8 @@
 #sideNews {
   border-left: 1px solid #000;
 }
-#articleBar-layout {
-  border-right: 1px solid #000;
+.articlesCategoryRight{
+  border-bottom: 1px solid #000;
 }
 #sideNews3-layout {
   border-bottom: 1px solid #000;

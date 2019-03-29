@@ -9,10 +9,8 @@
         </router-link>
       </v-flex>
       <v-flex xs7>
-        <div id="info-content-2">
-          <p class="headline">{{article.title}}</p>
-          <!-- <p>{{article.info}}</p> -->
-        </div>
+        <h3 id="articleTitle">{{article.title}}</h3>
+        <!-- <p>{{article.info}}</p> -->
       </v-flex>
     </v-layout>
   </v-card>
@@ -37,16 +35,21 @@ export default {
 
 <style>
 #secondArticleStyle {
+  padding: 10px;
+  padding-top: 5px;
   box-shadow: inherit;
   background-color: inherit;
-  border-right: 1px solid #000;
-  padding-left: 5px;
+  padding-left: 20px;
 }
 .theme--light.v-sheet {
   background-color: inherit;
 }
-#info-content-2 {
-  padding-right: 5px;
-  padding-left: 15px;
+#articleTitle{
+  padding: 15px;
+  text-align: left;
+  font-weight: 400;
+  line-height: 32px !important;
+  letter-spacing: normal !important;
+  font-family: 'Roboto', sans-serif !important;
 }
 </style>
